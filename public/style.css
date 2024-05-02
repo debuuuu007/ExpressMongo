@@ -1,0 +1,13 @@
+body{
+    margin: 20px;
+    padding: 20px;
+}
+
+.chats{
+    background-color: royalblue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
