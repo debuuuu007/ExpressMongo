@@ -13,8 +13,21 @@
             <p>form: <%=i.from%></p>
             <p>to: <%=i.to%></p>
             <p>message: <%=i.message%></p>
+            <div>
+                <form action="/chats/<%=i._id%>/edit" method="get">
+                    <button>edit</button>
+                </form>
+                <br>
+                <form action="/chats/<%=i._id%>/rem?_method=DELETE" method="post">
+                    <button>Delete</button>
+                </form>
+            </div>
+            
         </div>
+        <p>Send at: <%=i.at.toString().split(" ")[4]%></p>
+        <p><%=i.at.toString().split(" ").slice(0,4).join(" ")%></p>
         <hr>
+        
     <%}%>
     
     <form action="/chats/new" method="get" >
