@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const mongoose = require('mongoose');
 
 const express=require("express")
@@ -39,8 +41,8 @@ async function main() {
 // })
 
 
-app.listen(8080,()=>{
-    console.log("Working in port 8080")
+app.listen(process.env.PORT,()=>{
+    console.log(`Working in port ${process.env.PORT}`)
 })
 
 app.get("/",(req,res)=>{
@@ -94,3 +96,5 @@ app.post("/chats/:id/rem",async (req,res)=>{
     console.log(newchat)
     res.redirect("/chats")
 })
+
+
